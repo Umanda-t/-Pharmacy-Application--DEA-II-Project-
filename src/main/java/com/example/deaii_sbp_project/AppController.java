@@ -1,6 +1,7 @@
 package com.example.deaii_sbp_project;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -18,10 +19,12 @@ public class AppController {
 
     // handler methods...
 
+
     @RequestMapping("/")
-    public String viewHomePage(Model model) {
-        List<Product> listProducts = service.listAll();
+    public String viewHomePage(Model model, @Param("keyword") String keyword) {
+        List<Product> listProducts = service.listAll(keyword);
         model.addAttribute("listProducts", listProducts);
+        model.addAttribute("keyword", keyword);
 
         return "index";
     }
