@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8" />
+  <title>Staff Login<</title>
+  <script type = "text/javascript">
+    function login() {
+
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if(username === "admin" && password === "admin123" )
+      {
+        alert( "Login Succeeded" );
+
+
+
+      }
+      else
+      {
+        alert( "Login failed" );
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+<div align="center">
+  <div class="col-lg-5 col-sm-10 mt-lg-9 mt-md-6 mt-7" >
+    <h1>Staff Login</h1>
+    <!--
+        <form action="#" th:action="@{/Login_Service}"method="post" id="loginForm" >
+        -->
+    <form action="#" th:action="@{/Login_Service}"name="loginForm" id="myForm" method="post" onsubmit ="return(login());" >
+      <div class="form-style-w3ls">
+
+
+        <input placeholder="User Name" type="text" name="username"  id="username" ><br>
+        <input  placeholder="Password" type="password" name="password"  id="password" ><br>
+
+        <input type="submit" value="Login" class="btn btn-style btn-primary w-30">
+
+      </div>
+    </form>
+  </div>
+
+
+</div>
+</body>
+</html>

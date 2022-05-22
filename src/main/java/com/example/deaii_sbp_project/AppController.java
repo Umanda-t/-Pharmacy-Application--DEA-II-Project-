@@ -4,10 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -18,10 +15,35 @@ public class AppController {
     private ProductService service;
 
     // handler methods...
-
-
     @RequestMapping("/")
-    public String viewHomePage(Model model, @Param("keyword") String keyword) {
+    public String viewHomePage() {
+        return "home";
+    }
+    @RequestMapping("/stafflogin")
+    public String viewlogin() {
+        return "stafflogin";
+    }
+
+
+    @RequestMapping("/Login_Service")
+    public String StaffLoginService() {
+        return "success";}
+
+    @RequestMapping("/aboutview")
+    public String viewAbout() {
+        return "about";
+    }
+    @RequestMapping("/allproducts")
+    public String viewAllproducts(Model model, @Param("keyword") String keyword) {
+        List<Product> listProducts = service.listAll(keyword);
+        model.addAttribute("listProducts", listProducts);
+        model.addAttribute("keyword", keyword);
+
+        return "products";
+    }
+
+    @RequestMapping("/viewproducts")
+    public String viewProducts(Model model, @Param("keyword") String keyword) {
         List<Product> listProducts = service.listAll(keyword);
         model.addAttribute("listProducts", listProducts);
         model.addAttribute("keyword", keyword);
@@ -40,7 +62,7 @@ public class AppController {
     public String saveProduct(@ModelAttribute("product") Product product) {
         service.save(product);
 
-        return "redirect:/";
+        return "redirect:/viewproducts";
     }
     @RequestMapping("/edit/{id}")
     public ModelAndView showEditProductPage(@PathVariable(name = "id") int id) {
@@ -54,7 +76,7 @@ public class AppController {
     @RequestMapping("/delete/{id}")
     public String deleteProduct(@PathVariable(name = "id") int id) {
         service.delete(id);
-        return "redirect:/";
+        return "redirect:/viewproducts";
     }
 }
 

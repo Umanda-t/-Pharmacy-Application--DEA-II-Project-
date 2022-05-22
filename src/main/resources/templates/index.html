@@ -11,7 +11,7 @@
     <a th:href="@{/new}"> Add New Product</a>
     <br/><br/>
 
-    <form th:action="@{/}">
+    <form th:action="@{/viewproducts}">
         Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
         &nbsp;
         <input type="submit" value="Search" />
@@ -21,7 +21,7 @@
 
     <script type="text/javascript">
         function clearSearch() {
-            window.location = "[[@{/}]]";
+            window.location = "[[@{/viewproducts}]]";
         }
     </script>
 
