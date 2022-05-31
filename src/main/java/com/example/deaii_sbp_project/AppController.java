@@ -33,6 +33,7 @@ public class AppController {
     public String viewAbout() {
         return "about";
     }
+
     @RequestMapping("/allproducts")
     public String viewAllproducts(Model model, @Param("keyword") String keyword) {
         List<Product> listProducts = service.listAll(keyword);
@@ -64,14 +65,26 @@ public class AppController {
 
         return "redirect:/viewproducts";
     }
-    @RequestMapping("/edit/{id}")
+
+
+    @GetMapping("/edit/{id}")
+    public String showEditProductPage(Model model,@PathVariable(name = "id") int id) {
+
+
+        Product product = service.get(id);
+        model.addAttribute("product", product);
+        return "edit_product";
+    }
+
+
+    /** @RequestMapping("/edit/{id}")
     public ModelAndView showEditProductPage(@PathVariable(name = "id") int id) {
         ModelAndView mav = new ModelAndView("edit_product");
         Product product = service.get(id);
         mav.addObject("product", product);
 
         return mav;
-    }
+    }**/
 
     @RequestMapping("/delete/{id}")
     public String deleteProduct(@PathVariable(name = "id") int id) {

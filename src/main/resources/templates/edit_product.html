@@ -4,14 +4,21 @@
 <head>
   <meta charset="utf-8" />
   <title>Edit Product</title>
+
 </head>
+
+
 <body>
+
+
 <div align="center">
-  <h1>Edit Product</h1>
-  <br />
+  <br><br><br>
+
   <form action="#" th:action="@{/save}" th:object="${product}"
         method="post">
-
+    <div align="center">
+      <br/><h1>Edit Product Details</h1>
+    <br/>
     <table border="0" cellpadding="10">
       <tr>
         <td>Product ID:</td>
@@ -38,10 +45,75 @@
         <td><input type="text" th:field="*{price}" /></td>
       </tr>
       <tr>
-        <td colspan="2"><button type="submit">Save</button> </td>
+        <div >
+        <td align="center" colspan="2"><button type="submit">Save</button> </td>
+        </div>
       </tr>
     </table>
+    </div>
   </form>
+
 </div>
+<style>
+  button {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  /*div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 25px;
+  }*/
+
+  html {
+    height: 100%;
+    /*Image only BG fallback*/
+
+    /*background = gradient + image pattern combo*/
+    background:lightgray;
+  }
+
+  body {
+    font-family: montserrat, arial, verdana;
+  }
+
+
+  /*form styles*/
+  form {
+    width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+
+  }
+
+</style>
 </body>
 </html>
