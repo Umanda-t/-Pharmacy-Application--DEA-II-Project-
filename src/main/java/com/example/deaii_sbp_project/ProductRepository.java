@@ -10,4 +10,5 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
             + " OR p.madein LIKE %?1%"
             + " OR CONCAT(p.price, '') LIKE %?1%")
     public List<Product> search(String keyword);
+
 }

@@ -4,24 +4,164 @@
 <head>
     <meta charset="utf-8"/>
     <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{fonts/icomoon/style.css}">
+
+    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{fonts/flaticon/font/flaticon.css}">
+    <link rel="stylesheet" th:href="@{css/magnific-popup.css}">
+    <link rel="stylesheet" th:href="@{css/jquery-ui.css}">
+    <link rel="stylesheet" th:href="@{css/owl.carousel.min.css}">
+    <link rel="stylesheet" th:href="@{css/owl.theme.default.min.css}">
+    <link rel="stylesheet" th:href="@{css/aos.css}">
+    <link rel="stylesheet" th:href="@{css/style.css}">
 </head>
 <body>
 <div th:insert="header"> </div>
 
-<div align="center">
-    <h1>Home</h1>
-    <a th:href="@{/allproducts}">All Products</a>
-    <br/>
-    <a th:href="@{/stafflogin}"> Staff Login</a>
-    <br/>
-    <a th:href="@{/aboutview}"> About</a>
-    <br/>
+<div class="site-wrap">
+
+
+<!--    <div class="owl-carousel owl-single px-0">-->
+    <div>
+        <div class="site-blocks-cover overlay" style="background-image: url('images/hero_bg_2.jpg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto align-self-center">
+                        <div class="site-block-cover-content text-center">
+                            <h1 class="mb-0"><strong class="text-primary">Gateway </strong> Pharmacy</h1>
+
+                            <div class="row justify-content-center mb-5">
+                                <div class="col-lg-6 text-center">
+                                    <P>Gateway Pharmacy Limited a 100% subsidiary of Healthcare is one of the
+                                        1st branded retail Pharmaceutical Chains in Sri Lanka that has entered the market with a view of
+                                        creating a difference in the retail pharmaceutical trade.</P>
+                                </div>
+                            </div>
+
+                            <p>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 
 
 
+    <div class="site-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="feature">
+                        <span class="wrap-icon flaticon-24-hours-drugs-delivery"></span>
+                        <h3><a href="#">Our Service</a></h3>
+                        <p>We provide 24 hours service and our products are the best quality products with affordable prices.
+                            We provide free home delivery and you can pay after the delivery.
+                            We value our customers and provide best service, effectively and efficiently.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature">
+                        <span class=" wrap-icon flaticon-medicine"></span>
+                        <h3><a href="#">Why Us</a></h3>
+                        <p>Headed by a team of professionals, Gateway Pharmacy has introduced an
+                            innovative concept centered on superior customer care, latest technology in data management, a wide product assortment,
+                            affordable prices and a host of value additions.</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature">
+                        <span class="wrap-icon flaticon-test-tubes"></span>
+                        <h3><a href="#">About Us</a></h3>
+                        <p>
+                            Gateway Pharmacy Limited a 100% subsidiary of  Healthcare is one of the 1st
+                            branded retail Pharmaceutical Chains in Sri Lanka that has entered the market with a view of creating a
+                            difference in the retail pharmaceutical trade.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
+    <div class="site-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="title-section text-center col-12">
+                    <h2>Pharmacy <strong class="text-primary">Products</strong></h2>
+                </div>
+            </div>
+
+            <div class="site-section bg-light">
+                <div class="container">
+            <div class="row">
+
+                        <div class="col-sm-6 col-lg-4 text-center item mb-4 item-v2">
+                            <span class="onsale">Sale</span>
+                            <a  href="#" th:href="@{/allproducts}"> <img src="images/product_03.png" alt="Image"></a>
+                            <h3 class="text-dark"><a href="shop-single.html">Umcka Cold Care</a></h3>
+                            <p class="price">Rs. 456.0</p>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-4 text-center item mb-4 item-v2">
+                            <a  href="#" th:href="@{/allproducts}"> <img src="images/product_01.png" alt="Image"></a>
+                            <h3 class="text-dark"><a href="shop-single.html">Bioderma</a></h3>
+                            <p class="price">Rs. 560.0</p>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-4 text-center item mb-4 item-v2">
+                            <span class="onsale">Sale</span>
+                            <a  href="#" th:href="@{/allproducts}"> <img src="images/product_02.png" alt="Image"></a>
+                            <h3 class="text-dark"><a href="shop-single.html">Chanca Piedra</a></h3>
+                            <p class="price">Rs. 690.0</p>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-4 text-center item mb-4 item-v2">
+                            <a  href="#" th:href="@{/allproducts}"> <img src="images/product_04.png" alt="Image"></a>
+                            <h3 class="text-dark"><a href="shop-single.html">Cetyl Pure</a></h3>
+                            <p class="price">Rs. 790.0</p>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-4 text-center item mb-4 item-v2">
+                            <a  href="#" th:href="@{/allproducts}"> <img src="images/product_05.png" alt="Image"></a>
+                            <h3 class="text-dark"><a href="shop-single.html">CLA Core</a></h3>
+                            <p class="price">Rs. 1270.0</p>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-4 text-center item mb-4 item-v2">
+                            <a  href="#" th:href="@{/allproducts}"> <img src="images/product_06.png" alt="Image"></a>
+                            <h3 class="text-dark"><a href="shop-single.html">Poo Pourri</a></h3>
+                            <p class="price">Rs. 780.0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 </div>
+
+<div th:insert="footer"> </div>
+            <script th:src="@{js/jquery-3.3.1.min.js}"></script>
+            <script th:src="@{js/jquery-ui.js}"></script>
+            <script th:src="@{js/popper.min.js}"></script>
+            <script th:src="@{js/bootstrap.min.js}"></script>
+            <script th:src="@{js/owl.carousel.min.js}"></script>
+            <script th:src="@{js/jquery.magnific-popup.min.js}"></script>
+            <script th:src="@{js/aos.js}"></script>
+            <script th:src="@{js/main.js}"></script>
+
 </body>
 </html>

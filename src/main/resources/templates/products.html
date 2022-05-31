@@ -45,10 +45,14 @@
       <td th:text="${product.quantity}">Quantity</td>
       <td th:text="${product.madein}">Made in</td>
       <td th:text="${product.price}">Price</td>
+      <td>
+        <a th:href="@{'/buy/' + ${product.id}}">Buy</a>
 
+      </td>
     </tr>
     </tbody>
   </table>
 </div>
+<div th:insert="footer"> </div>
 </body>
 </html>

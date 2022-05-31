@@ -13,6 +13,8 @@ import java.util.List;
 public class AppController {
     @Autowired
     private ProductService service;
+    @Autowired
+    private UserRepository userRepo;
 
     // handler methods...
     @RequestMapping("/")
@@ -66,30 +68,45 @@ public class AppController {
         return "redirect:/viewproducts";
     }
 
+//
+//    @GetMapping("/edit/{id}")
+//    public String showEditProductPage(Model model,@PathVariable(name = "id") int id) {
+//
+//
+//        Product product = service.get(id);
+//        model.addAttribute("product", product);
+//        return "edit_product";
+//    }
 
-    @GetMapping("/edit/{id}")
-    public String showEditProductPage(Model model,@PathVariable(name = "id") int id) {
 
-
-        Product product = service.get(id);
-        model.addAttribute("product", product);
-        return "edit_product";
-    }
-
-
-    /** @RequestMapping("/edit/{id}")
+   @RequestMapping("/edit/{id}")
     public ModelAndView showEditProductPage(@PathVariable(name = "id") int id) {
         ModelAndView mav = new ModelAndView("edit_product");
         Product product = service.get(id);
         mav.addObject("product", product);
 
         return mav;
-    }**/
+    }
+    @RequestMapping("/buy/{id}")
+    public String  BuyProductPage(Model model,@PathVariable(name = "id") int id) {
+
+        User user = new User();
+        user.setId(id);
+        model.addAttribute("user", user);
+       return "buy_product";
+    }
 
     @RequestMapping("/delete/{id}")
     public String deleteProduct(@PathVariable(name = "id") int id) {
         service.delete(id);
         return "redirect:/viewproducts";
+    }
+
+    @PostMapping("/buy_success")
+    public String processRegister(User user) {
+        userRepo.save(user);
+
+        return "buy_success";
     }
 }
 

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8" />
+  <title>Buy Product</title>
+
+</head>
+
+
+<body>
+
+
+<div align="center">
+  <br>
+
+  <form action="#" th:action="@{/buy_success}" th:object="${user}"
+        method="post">
+    <div align="center">
+      <br/><h1>Order Item</h1>
+      <br/>
+      <table border="0" cellpadding="10">
+        <tr>
+          <td>Product ID</td>
+          <td>
+            <input type="text" th:field="*{id}" readonly="readonly" />
+          </td>
+        </tr>
+        <tr>
+          <td> Name </td>
+          <td>
+            <input type="text" th:field="*{username}" />
+          </td>
+        </tr>
+        <tr>
+          <td>Contact Number</td>
+          <td><input type="text" th:field="*{contactno}" /></td>
+        </tr>
+        <tr>
+          <td>Address</td>
+
+          <td>
+            <textarea type="text" th:field="*{address}" name="address" id="address"></textarea>
+<!--            <input class="textarea" type="text" th:field="*{address}"/>-->
+          </td>
+        </tr>
+        <tr>
+          <div >
+            <td align="center" colspan="2"><button type="submit">Order</button> </td>
+          </div>
+        </tr>
+      </table>
+    </div>
+  </form>
+
+</div>
+<style>
+  button {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+   textarea {
+    padding: 12px;
+     width: 170px;
+     height: 90px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  input[class="textarea"] {
+    height: 90px;
+  }
+  input {
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #2C3E50;
+    width: 190px;
+  }
+  button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  /*div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 25px;
+  }*/
+
+  html {
+    height: 100%;
+    /*Image only BG fallback*/
+
+    /*background = gradient + image pattern combo*/
+    background:lightgray;
+  }
+
+  body {
+    font-family: montserrat, arial, verdana;
+  }
+
+
+  /*form styles*/
+  form {
+    width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+
+  }
+
+</style>
+</body>
+</html>
