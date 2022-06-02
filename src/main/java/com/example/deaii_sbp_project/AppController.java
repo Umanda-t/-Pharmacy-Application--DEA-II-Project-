@@ -53,6 +53,14 @@ public class AppController {
 
         return "index";
     }
+    @RequestMapping("/vieworders")
+    public String viewusers(Model model) {
+        List<User> listUsers = userRepo.findAll();
+        model.addAttribute("listUsers", listUsers);
+
+        return "order";
+
+    }
 
     @RequestMapping("/new")
     public String showNewProductPage(Model model) {

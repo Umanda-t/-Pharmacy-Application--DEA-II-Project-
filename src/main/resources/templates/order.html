@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8"/>
+  <title>All Products</title>
+</head>
+<body>
+<div th:insert="header"> </div>
+
+<div align="center">
+  <h1>All Orders</h1>
+
+
+
+  <br/><br/>
+  <table border="1" cellpadding="10">
+    <thead>
+    <tr>
+      <th>Order Number</th>
+      <th>Customer Name</th>
+      <th>Product ID</th>
+      <th>Contact Number</th>
+      <th>Address</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${listUsers}">
+      <td th:text="${user.uid}">Order Number</td>
+      <td th:text="${user.username}">Customer Name</td>
+      <td th:text="${user.id}">Product ID</td>
+      <td th:text="${user.contactno}">Contact Number</td>
+      <td th:text="${user.address}">Address</td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div th:insert="footer"> </div>
+</body>
+</html>
