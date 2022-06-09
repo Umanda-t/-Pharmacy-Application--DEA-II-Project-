@@ -7,16 +7,44 @@
 </head>
 <body>
 <div th:insert="header"> </div>
-<div align="center">
-  <h1>Login Success</h1>
+<!--<div align="center">-->
+<!--  <h1>Login Success</h1>-->
 
 
-  <a th:href="@{/viewproducts}"> View Products</a>
-  <br/>
-  <a th:href="@{/vieworders}"> View Orders</a>
-  <br/>
+<!--  <a th:href="@{/viewproducts}"> View Products</a>-->
+<!--  <br/>-->
+<!--  <a th:href="@{/vieworders}"> View Orders</a>-->
+<!--  <br/>-->
 
-</div>
+  <div class="site-wrap">
+
+
+
+    <div class="site-blocks-cover overlay" style="background-image: url('images/hero_bg.jpg');">
+      <!--    <img th:src="@{/images/about.jpg}" alt="" class="radius-image img-fluid">-->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto align-self-center">
+            <div class="site-block-cover-content text-center">
+              <h1 class="mb-0">Gateway <strong class="text-primary"> Pharmacy</strong></h1>
+              <div class="row justify-content-center mb-5">
+                <div class="col-lg-6 text-center">
+                  <p>
+                    Staff Login Successful!!!!
+                  </p>
+                </div>
+              </div>
+              <p>
+                <a href="#" th:href="@{/viewproducts}"class="btn btn-primary px-5 py-3"> View All Products</a>
+                <a href="#" th:href="@{/vieworders}"class="btn btn-primary px-5 py-3"> View All Orders</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 <div th:insert="footer"> </div>
 </html>

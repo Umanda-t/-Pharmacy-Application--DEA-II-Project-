@@ -3,7 +3,7 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="utf-8" />
-  <title>Staff Login<</title>
+  <title>Staff Login </title>
   <script type = "text/javascript">
     function login() {
 
@@ -28,9 +28,20 @@
 <body>
 <div th:insert="header"> </div>
 
-<div align="center">
+<div align="center" class="site-wrap">
+  <div class="bg-light py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mb-0">
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-section">
   <div class="col-lg-5 col-sm-10 mt-lg-9 mt-md-6 mt-7" >
-    <h1>Staff Login</h1>
+    <h1 class="h1 mb-5 text-black">Staff Login</h1>
     <!--
         <form action="#" th:action="@{/Login_Service}"method="post" id="loginForm" >
         -->
@@ -38,16 +49,16 @@
       <div class="form-style-w3ls">
 
 
-        <input placeholder="User Name" type="text" name="username"  id="username" ><br>
-        <input  placeholder="Password" type="password" name="password"  id="password" ><br>
+        <input placeholder="User Name" type="text" name="username"  id="username" class="form-control"><br>
+        <input  placeholder="Password" type="password" name="password"  id="password" class="form-control"><br>
 
-        <input type="submit" value="Login" class="btn btn-style btn-primary w-30">
+        <input type="submit" value="Login" class="btn btn-primary btn-md">
 
       </div>
     </form>
   </div>
 
-
+  </div>
 </div>
 <div th:insert="footer"> </div>
 </body>

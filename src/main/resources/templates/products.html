@@ -8,50 +8,103 @@
 <body>
 <div th:insert="header"> </div>
 
-<div align="center">
-  <h1>All Products</h1>
+<!--<div align="center">-->
+<!--  <h1>All Products</h1>-->
 
 
-  <form th:action="@{/allproducts}">
-    Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
-    &nbsp;
-    <input type="submit" value="Search" />
-    &nbsp;
-    <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
-  </form>
+<!--  <form th:action="@{/allproducts}">-->
+<!--    Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />-->
+<!--    &nbsp;-->
+<!--    <input type="submit" value="Search" />-->
+<!--    &nbsp;-->
+<!--    <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />-->
+<!--  </form>-->
 
-  <script type="text/javascript">
-    function clearSearch() {
-      window.location = "[[@{/allproducts}]]";
-    }
-  </script>
+<!--  <script type="text/javascript">-->
+<!--    function clearSearch() {-->
+<!--      window.location = "[[@{/allproducts}]]";-->
+<!--    }-->
+<!--  </script>-->
 
-  <br/><br/>
-  <table border="1" cellpadding="10">
-    <thead>
-    <tr>
-      <th>Product ID</th>
-      <th>Name</th>
-      <th>Quantity</th>
-      <th>Made In</th>
-      <th>Price</th>
+<!--  <br/><br/>-->
+<!--  <table border="1" cellpadding="10">-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--      <th>Product ID</th>-->
+<!--      <th>Name</th>-->
+<!--      <th>Quantity</th>-->
+<!--      <th>Made In</th>-->
+<!--      <th>Price</th>-->
 
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="product : ${listProducts}">
-      <td th:text="${product.id}">Product ID</td>
-      <td th:text="${product.name}">Name</td>
-      <td th:text="${product.quantity}">Quantity</td>
-      <td th:text="${product.madein}">Made in</td>
-      <td th:text="${product.price}">Price</td>
-      <td>
-        <a th:href="@{'/buy/' + ${product.id}}">Buy</a>
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr th:each="product : ${listProducts}">-->
+<!--      <td th:text="${product.id}">Product ID</td>-->
+<!--      <td th:text="${product.name}">Name</td>-->
+<!--      <td th:text="${product.quantity}">Quantity</td>-->
+<!--      <td th:text="${product.madein}">Made in</td>-->
+<!--      <td th:text="${product.price}">Price</td>-->
+<!--      <td>-->
+<!--        <a th:href="@{'/buy/' + ${product.id}}">Buy</a>-->
 
-      </td>
-    </tr>
-    </tbody>
-  </table>
+<!--      </td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--  </table>-->
+<!--</div>-->
+
+<div class="site-wrap">
+
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-11">
+          <h3 class="mb-3 h6 text-uppercase text-black d-block">Search Products</h3>
+          <div class="col-md-21">
+            <form th:action="@{/allproducts}">
+              <input type="text" class="form-control" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
+              <br>
+              <input type="submit" value="Search" class="btn btn-primary btn-md" />
+
+              <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" class="btn btn-primary btn-md"/>
+
+            </form>
+          </div>
+        </div>
+  </div>
+      <script type="text/javascript">
+        function clearSearch() {
+          window.location = "[[@{/allproducts}]]";
+        }
+      </script>
+
+
+  <div class="site-section bg-light">
+    <div class="container">
+
+
+      <div class="row">
+          <tr th:each="product : ${listProducts}">
+
+        <div class="col-lg-4"align="center">
+          <div class="p-4 bg-white mb-3 rounded">
+            <br>
+            <h3 class="text-dark"><a th:href="@{/allproducts}"><td th:text="${product.name}"/></a></h3>
+            <h4 class="price"><h7>Rs. </h7><td th:text="${product.price}"/></h4>
+            <h5 class="madein"><td th:text="${product.madein}"/></h5>
+            <p>PID_<td th:text="${product.id}"/><br/>
+            Quantity (<td th:text="${product.quantity}"/>)</p>
+            <a th:href="@{'/buy/' + ${product.id}}" class="btn btn-primary btn-md">Buy</a></button>
+          </div>
+        </div>
+          </tr>
+      </div>
+      </div>
+
+    </div>
+  </div>
+
 </div>
 <div th:insert="footer"> </div>
 </body>
