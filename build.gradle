@@ -19,7 +19,8 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 //	runtimeOnly 'mysql:mysql-connector-java'
 	// https://mvnrepository.com/artifact/org.postgresql/postgresql
-	runtimeOnly 'org.postgresql:postgresql'
+//	runtimeOnly 'org.postgresql:postgresql'
+	implementation group: 'org.postgresql', name: 'postgresql', version: '9.4-1201-jdbc41'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
