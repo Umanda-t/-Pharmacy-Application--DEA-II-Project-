@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: java -jar build/libs/DEAII_SBP_Project-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
