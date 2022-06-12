@@ -17,10 +17,15 @@ public class AppController {
     private UserRepository userRepo;
 
     // handler methods...
-    @RequestMapping("/")
+
+    @GetMapping("")
     public String viewHomePage() {
         return "home";
     }
+//    @RequestMapping("/")
+//    public String viewHomePage() {
+//        return "home";
+//    }
     @RequestMapping("/stafflogin")
     public String viewlogin() {
         return "stafflogin";
