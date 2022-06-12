@@ -15,13 +15,12 @@ public class AppController {
     private ProductService service;
     @Autowired
     private UserRepository userRepo;
-
-    // handler methods...
-
     @GetMapping("")
     public String viewHomePage() {
-        return "home";
+        return "Hello";
+
     }
+    // handler methods...
 //    @RequestMapping("/")
 //    public String viewHomePage() {
 //        return "home";
