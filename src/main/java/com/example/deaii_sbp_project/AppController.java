@@ -1,7 +1,6 @@
 package com.example.deaii_sbp_project;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,22 +10,17 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
-@SpringBootApplication
 public class AppController {
     @Autowired
     private ProductService service;
     @Autowired
     private UserRepository userRepo;
-    @GetMapping("")
-    public String viewHomePage() {
-        return "Hello";
 
-    }
     // handler methods...
-//    @RequestMapping("/")
-//    public String viewHomePage() {
-//        return "home";
-//    }
+    @RequestMapping("/")
+    public String viewHomePage() {
+        return "home";
+    }
     @RequestMapping("/stafflogin")
     public String viewlogin() {
         return "stafflogin";
