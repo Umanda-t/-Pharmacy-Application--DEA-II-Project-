@@ -1,1 +1,1 @@
-web: java -jar build/libs/DEA_SBP_Project-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
+web: java -jar build/libs/DEAII_SBP_Project-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
