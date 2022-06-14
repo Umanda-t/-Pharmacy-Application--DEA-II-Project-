@@ -16,12 +16,6 @@
 * JUnit Jupiter and AssertJ 
 
 
-
-## 📝Trello
-https://trello.com/b/51jKqhp3/vehicle-service-center-project
-
-
-
 ## 💻 Application View
 
 ![1](https://user-images.githubusercontent.com/57774048/173617128-43241539-d5b5-4553-ae24-0a179eafaa44.png)
