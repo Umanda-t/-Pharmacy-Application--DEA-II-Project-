@@ -22,20 +22,9 @@ https://trello.com/b/51jKqhp3/vehicle-service-center-project
 
 
 
-## 💻 Application Link
-https://vehicleservicecenter.herokuapp.com/
+## 💻 Application View
 
-## 💻 Deployment
-![deployment image](https://user-images.githubusercontent.com/57774048/136756116-cc9b5bdf-ebb2-4508-9c26-5abbf64d71f7.png)
-
-## 💻 Jenkins Pipeline
-
-![pipeline](https://user-images.githubusercontent.com/57774048/137006608-04e73c1c-1524-4490-9720-7142d5c7504f.png)
-
-## 💻 Unit Testing
-![test](https://user-images.githubusercontent.com/57774048/137264099-e60cb74b-3186-4043-9f6e-9f6ab3e1ef96.png)
-
-
-## :octocat: ScreenShots
-
-![homepage](https://user-images.githubusercontent.com/57774048/136754910-653ccff0-bd9f-424b-8bc4-66f36af7514c.png)
+![1](https://user-images.githubusercontent.com/57774048/173617128-43241539-d5b5-4553-ae24-0a179eafaa44.png)
+![2](https://user-images.githubusercontent.com/57774048/173617152-929f10ce-e54d-43f8-b23a-75a878b66191.png)
+![3](https://user-images.githubusercontent.com/57774048/173617179-8dd7c2e1-5797-4c1f-8812-342e39462d47.png)
+![4](https://user-images.githubusercontent.com/57774048/173617250-648c339a-3a23-4da0-949f-50be4d4ee329.png)
