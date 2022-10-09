@@ -1,7 +1,6 @@
 
 
 # :wave: Gateway Pharmacy
-## ID = 23006739
 ## Name = G.U.Thathsarani
  
 ## 💻 Used Technologies
